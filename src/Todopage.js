@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRightFromBracket} from '@fortawesome/free-solid-svg-icons';
 
 function TodoPage() {
     const [tasks, setTasks] = useState([]);  
@@ -156,10 +157,19 @@ function TodoPage() {
     const filterTodo = selectedTodoStatus === "All"
     ? tasks
     : tasks.filter((task) => task.status === selectedTodoStatus);
+    const handleLogout = () => {
+        localStorage.removeItem('userId'); 
+        window.location.href = '/'; 
+    };
+
     return (
         <div className="todo-container">
             <h1>My Tasks</h1>
-
+            <div className="logout-container">
+                <button className="logout-btn" onClick={handleLogout}>
+                    <FontAwesomeIcon icon={faArrowRightFromBracket} />Logout
+                </button>
+            </div>
             <div className="input-area">
                 <input
                     id="title-input" 
@@ -175,7 +185,7 @@ function TodoPage() {
                 />
                {!isEditFormVisible && (
                     <button onClick={handleAdd} type="button" className="addbtn">Add</button>
-                )}3
+                )}
                 {isEditFormVisible && editingTask && (
                         <div className="edit-buttons">
                             <button onClick={handleSaveEdit} className="delbtn">
