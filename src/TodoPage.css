@@ -1,0 +1,225 @@
+
+
+.todo-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: transparent;
+    border: 1px solid #3b82f6;
+    font-family: Arial, sans-serif;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+}
+
+.todo-container h1 {
+    font-size: 28px;
+    font-weight: normal;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-area input,
+.input-area textarea {
+    padding: 10px;
+    border: none;
+    font-size: 15px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 0;
+    outline: none;
+    transition: border 0.2s ease;
+    width: 600px;
+    border-radius: 5px;
+    border-bottom: 1px solid #2563eb;
+}
+
+.input-area input:focus,
+.input-area textarea:focus {
+    border-color: #2563eb;
+}
+
+.input-area textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.input-area button {
+    padding: 10px 15px;
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: fit-content;
+    margin-left: 250px;
+}
+
+.input-area button:hover {
+    background-color: #2563eb;
+}
+
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.task-table th,
+.task-table td {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 15px;
+}
+
+.task-table th {
+    background-color: #f0f0f0;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.task-table td {
+    color: #444;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: red;
+    margin-left: 20px;
+}
+.icon-button:hover {
+    color: #dc2626;
+}
+.icon b
+.task-table th{
+    color: #3b82f6;
+}
+.table-container{
+    margin-top: 20px;
+}
+.table-container p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+.table-container h2{
+    font-size: 28px;
+    font-weight: normal;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #222;
+}
+.addbtn{
+    border-radius: 10px;
+}
+.pen{
+    color: rgb(33, 31, 31);
+    font-size: 16px;
+    margin-right: 10px;
+}
+.pen:hover{
+    color: black;
+}
+.status-select{
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #4a90e2;
+  background-color: #eef1f4;
+  font-size: 14px;
+  color: rgb(33, 31, 31);
+}
+.status-select:focus {
+    border-color: #4a90e2;
+    background-color: #fff;
+}
+.completed-row {
+    background-color: #e6ffe6; 
+}
+.completed-row td{
+    color: #3b82f6;
+}
+.completed-row select{
+    color: #3b82f6;
+}
+.pending-row {
+    background-color: #fff; 
+}
+.edit-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+.delbtn, .canbtn {
+    margin: 0;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: none;
+    /* background-color: #007bff;  */
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+}
+  
+.delbtn:hover, .canbtn:hover {
+    background-color: #0056b3;
+}
+  
+.delbtn .faPen, .canbtn .faTimes {
+    margin-right: 8px;
+}
+.task-table {
+    border-collapse: separate; 
+    border-spacing: 0; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    /* table-layout: fixed; */
+}
+.table-container div {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.table-container label {
+    font-size: 1rem;
+    font-weight: 600;
+}
+.table-container select {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.table-container select:hover {
+    border-color: #007bff;
+}
+.table-container select:focus {
+    outline: none;
+    border-color: #0056b3;
+}
+.filter-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
