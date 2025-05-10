@@ -251,4 +251,19 @@
 .logout-btn svg {
     font-size: 18px; 
 }
+.checkbox-cell {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+
+.status-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #4caf50;
+  transition: all 0.2s ease;
+  margin-top: 10px;
+}
+
 

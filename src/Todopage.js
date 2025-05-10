@@ -25,20 +25,20 @@ function TodoPage() {
     const handleDescription = (event) => {
         setDescription(event.target.value);
     }
-    const handleStatusChange = async (taskId, selectedValue) => {
-        const updatedStatus = selectedValue === 'true' ? 'completed' : 'pending';
-    
+    const handleStatusChange = async (taskId, isChecked) => {
+        const updatedStatus = isChecked ? 'completed' : 'pending';
+
         try {
             const response = await fetch(`http://localhost:8080/todos/${taskId}?status=${updatedStatus}`, {
                 method: 'PUT',
             });
-    
+
             if (!response.ok) {
                 throw new Error('Failed to update status');
             }
-    
+
             const updatedTask = await response.json();
-    
+
             setTasks(prevTasks =>
                 prevTasks.map(task =>
                     task.id === taskId ? { ...task, status: updatedTask.status } : task
@@ -48,6 +48,7 @@ function TodoPage() {
             console.error("Error updating task status:", error);
         }
     };
+
 
 
     const handleDelete = async (taskId) => {
@@ -224,11 +225,16 @@ function TodoPage() {
                             <tr key={task.id}  className={task.status === 'completed' ? 'completed-row' : 'pending-row'}>
                                 <td>{task.title}</td>
                                 <td>
-                                    <select value={task.status === 'completed' ? 'true' : 'false'} onChange={(e) => handleStatusChange(task.id, e.target.value)} className="status-select">
-                                            <option value="true">True</option>
-                                            <option value="false">False</option>
-                                    </select>
+                                    <div className="checkbox-cell">
+                                        <input
+                                        type="checkbox"
+                                        className="status-checkbox"
+                                        checked={task.status === 'completed'}
+                                        onChange={(e) => handleStatusChange(task.id, e.target.checked)}
+                                        />
+                                    </div>
                                 </td>
+
                                 <td>{task.description}</td>
                                 <td>{task.status}</td>
                                 <td>
