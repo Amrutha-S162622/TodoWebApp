@@ -14,7 +14,11 @@ Report on the React To-Do List Project
 
         Users can add new tasks with a title and description.
         
-        Tasks can be marked as completed or pending.
+        Tasks can be marked as completed or pending using a checkbox.
+
+            Checking the box marks the task as completed.
+            
+            Unchecking the box marks it as pending.
         
         Tasks can be edited and updated.
         
@@ -58,7 +62,11 @@ Report on the React To-Do List Project
   
         Tasks are displayed in a table, with each task showing the title, description, status, and available actions (edit, delete, change status).
       
-        The status of each task can be updated to "completed" or "pending" via a select dropdown.
+        The status of each task can be updated to "completed" or "pending" using a checkbox:
+
+            ✅ Checked → Completed
+            
+            ⬜ Unchecked → Pending
       
     Editing and Deleting Tasks:
   
